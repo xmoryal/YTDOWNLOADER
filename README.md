@@ -30,7 +30,7 @@ A simple Python script to download YouTube videos in MP4 format using yt-dlp.
 
 2. Run the script:
    ```
-   python downloader.py
+   py downloader.py
    ```
 
 3. Enter the YouTube URL when prompted. The video will be downloaded in MP4 format to the 'video' folder.
