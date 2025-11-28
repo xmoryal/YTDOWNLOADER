@@ -9,7 +9,13 @@ def download_video(url, output_path='video'):
         yt_dlp_path = r"C:\\Users\\maaaz\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\yt-dlp.exe"
         output_template = os.path.join(output_path, '%(title)s.%(ext)s')
 
-        cookie_file = 'cookie.txt'
+        import shutil
+        import tempfile
+
+        # Use a temporary copy of cookie.txt to avoid modifying the original
+        with tempfile.NamedTemporaryFile(mode='w', delete=False, suffix='.txt') as temp_cookie:
+            shutil.copy('cookie.txt', temp_cookie.name)
+            cookie_file = temp_cookie.name
 
         base_command = [
             yt_dlp_path,
