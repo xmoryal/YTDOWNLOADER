@@ -89,7 +89,7 @@ Navigate to the project folder.
 Then run:
 
 ```bash
-py download.py
+py generate.py
 ```
 
 The program will ask for a YouTube URL.
